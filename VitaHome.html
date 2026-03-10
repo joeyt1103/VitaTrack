@@ -1,42 +1,104 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 
 <head>
-<meta charset = "utf-8">
-<title>VitaTrack - All in one fitness app</title>
-<meta name = "description" content = "VitaTrack website"
-<meta name = "author" content = "Joseph Trave">
-<link rel="styleSheet" href = "styleSheet.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VitaTrack — The All-in-One Fitness App</title>
+  <meta name="description" content="VitaTrack — Track nutrition, log workouts, and sync with Apple Health. Your personal health companion.">
+  <meta name="author" content="Joseph Trave">
+  <link rel="stylesheet" href="styleSheet.css">
 </head>
+
 <body>
-  <div id="main-container">
-    <div id="left-side">
-      <div id="app-logo">
-        <a href="VitaHome.html"><img class="app-logo" src="Untitled.png" alt="VitaTrack logo"></a>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="VitaHome.html" class="nav-logo">
+        <img src="Untitled.png" alt="VitaTrack" class="nav-logo-img">
+        <span class="nav-logo-text">VitaTrack</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="mailto:jtravelax@gmail.com">Contact</a></li>
+        <li><a href="Privacy Policy.html">Privacy</a></li>
+        <li><a href="Terms of Service.html">Terms</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-eyebrow">All your health, one place.</p>
+        <h1 class="hero-headline">The fitness app<br>built for you.</h1>
+        <p class="hero-subhead">Track nutrition, log workouts, and monitor your wellness — all seamlessly synced with Apple Health.</p>
+        <div class="hero-cta">
+          <a href="#" class="btn-appstore">
+            <svg class="appstore-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            Download on the App Store
+          </a>
+        </div>
       </div>
-      <div id="name">
-        <h2>VitaTrack</h2>
-      </div>
-      <div id="text">
-        <h1>The all in one fitness app</h1>
+      <div class="hero-visual">
+        <img src="phone.png" alt="VitaTrack App Screenshot" class="hero-phone">
       </div>
     </div>
+  </section>
 
-    <div id="right-side">
-      <div id="phone">
-        <a href="VitaHome.html"><img class="phone" src="phone.png" alt="Phone screen"></a>
+  <!-- Features Section -->
+  <section class="features">
+    <div class="features-inner">
+      <p class="features-eyebrow">Powerful. Intuitive. Yours.</p>
+      <h2 class="features-title">Everything you need.<br>Nothing you don't.</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🥗</div>
+          <h3>Nutrition Tracking</h3>
+          <p>Log meals effortlessly using our food database powered by USDA FoodData Central and Open Food Facts. Know exactly what you're eating.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💪</div>
+          <h3>Workout Logging</h3>
+          <p>Track every rep, set, and mile. Build custom routines and watch your strength and endurance grow over time.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">❤️</div>
+          <h3>Apple Health Sync</h3>
+          <p>Seamlessly integrates with Apple HealthKit so all your wellness data lives in one place — private, secure, and always on your device.</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
+  <!-- Callout Section -->
+  <section class="callout">
+    <div class="callout-inner">
+      <h2 class="callout-headline">Your health.<br>Your data.<br>Your control.</h2>
+      <p class="callout-sub">VitaTrack stores everything locally on your iPhone. No accounts, no servers, no tracking — just you and your goals.</p>
+      <a href="#" class="btn-appstore btn-light">
+        <svg class="appstore-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </svg>
+        Get VitaTrack Free
+      </a>
+    </div>
+  </section>
 
-  <div id="nav">
-    <nav>
-      <ul>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-copy">Copyright &copy; 2025 VitaTrack. All rights reserved.</p>
+      <ul class="footer-links">
         <li><a href="mailto:jtravelax@gmail.com">Contact</a></li>
         <li><a href="Privacy Policy.html">Privacy Policy</a></li>
         <li><a href="Terms of Service.html">Terms of Service</a></li>
       </ul>
-    </nav>
-  </div>
+    </div>
+  </footer>
+
 </body>
+</html>
