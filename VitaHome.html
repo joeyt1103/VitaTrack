@@ -1,104 +1,574 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VitaTrack — The All-in-One Fitness App</title>
-  <meta name="description" content="VitaTrack — Track nutrition, log workouts, and sync with Apple Health. Your personal health companion.">
+  <title>VitaTrack — Your Health, One Place</title>
+  <meta name="description" content="VitaTrack — Track nutrition, log workouts, monitor hydration, and sync seamlessly with Apple Health. All your health data, stored privately on your iPhone.">
   <meta name="author" content="Joseph Trave">
+  <meta property="og:title" content="VitaTrack — Your Health, One Place">
+  <meta property="og:description" content="Track nutrition, log workouts, and sync with Apple Health. Private, local, and beautifully designed.">
   <link rel="stylesheet" href="styleSheet.css">
 </head>
-
 <body>
 
   <!-- Navigation -->
-  <nav class="nav">
+  <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="VitaHome.html" class="nav-logo">
         <img src="Untitled.png" alt="VitaTrack" class="nav-logo-img">
         <span class="nav-logo-text">VitaTrack</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="mailto:jtravelax@gmail.com">Contact</a></li>
-        <li><a href="Privacy Policy.html">Privacy</a></li>
-        <li><a href="Terms of Service.html">Terms</a></li>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#nutrition">Nutrition</a></li>
+        <li><a href="#workouts">Workouts</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="mailto:jtravelax@gmail.com" class="nav-cta-link">Contact</a></li>
       </ul>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <p class="hero-eyebrow">All your health, one place.</p>
-        <h1 class="hero-headline">The fitness app<br>built for you.</h1>
-        <p class="hero-subhead">Track nutrition, log workouts, and monitor your wellness — all seamlessly synced with Apple Health.</p>
-        <div class="hero-cta">
-          <a href="#" class="btn-appstore">
-            <svg class="appstore-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-            </svg>
-            Download on the App Store
-          </a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <img src="phone.png" alt="VitaTrack App Screenshot" class="hero-phone">
-      </div>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section class="features">
-    <div class="features-inner">
-      <p class="features-eyebrow">Powerful. Intuitive. Yours.</p>
-      <h2 class="features-title">Everything you need.<br>Nothing you don't.</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">🥗</div>
-          <h3>Nutrition Tracking</h3>
-          <p>Log meals effortlessly using our food database powered by USDA FoodData Central and Open Food Facts. Know exactly what you're eating.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">💪</div>
-          <h3>Workout Logging</h3>
-          <p>Track every rep, set, and mile. Build custom routines and watch your strength and endurance grow over time.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">❤️</div>
-          <h3>Apple Health Sync</h3>
-          <p>Seamlessly integrates with Apple HealthKit so all your wellness data lives in one place — private, secure, and always on your device.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Callout Section -->
-  <section class="callout">
-    <div class="callout-inner">
-      <h2 class="callout-headline">Your health.<br>Your data.<br>Your control.</h2>
-      <p class="callout-sub">VitaTrack stores everything locally on your iPhone. No accounts, no servers, no tracking — just you and your goals.</p>
-      <a href="#" class="btn-appstore btn-light">
-        <svg class="appstore-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-        </svg>
-        Get VitaTrack Free
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <ul>
+        <li><a href="#features" class="mobile-link">Features</a></li>
+        <li><a href="#nutrition" class="mobile-link">Nutrition</a></li>
+        <li><a href="#workouts" class="mobile-link">Workouts</a></li>
+        <li><a href="#privacy" class="mobile-link">Privacy</a></li>
+        <li><a href="mailto:jtravelax@gmail.com" class="mobile-link">Contact</a></li>
+        <li><a href="Privacy Policy.html" class="mobile-link">Privacy Policy</a></li>
+        <li><a href="Terms of Service.html" class="mobile-link">Terms of Service</a></li>
+      </ul>
+      <a href="#" class="btn-appstore" style="margin-top: 32px;">
+        <svg class="appstore-icon" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        Download Free
       </a>
     </div>
-  </section>
+  </div>
 
-  <!-- Footer -->
+  <main>
+
+    <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-badge animate-fade-up">
+            <span class="badge-pill">
+              <span class="badge-dot"></span>
+              Now Available on the App Store
+            </span>
+          </div>
+          <h1 class="hero-headline animate-fade-up anim-delay-1">
+            All your health,<br><span class="text-gradient">one place.</span>
+          </h1>
+          <p class="hero-subhead animate-fade-up anim-delay-2">
+            Track nutrition with millions of foods, log every workout, monitor hydration, and sync seamlessly with Apple Health — all stored privately on your iPhone.
+          </p>
+          <div class="hero-actions animate-fade-up anim-delay-3">
+            <a href="#" class="btn-appstore magnetic-btn">
+              <svg class="appstore-icon" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              Download on the App Store
+            </a>
+            <a href="#features" class="btn-ghost">
+              Explore features
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual animate-fade-in anim-delay-2" id="heroVisual">
+          <div class="phone-frame" id="phoneFrame">
+            <div class="phone-glow"></div>
+            <img src="phone.png" alt="VitaTrack iPhone App" class="hero-phone" id="heroPhone">
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-hint animate-fade-up anim-delay-4">
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ═══ MARQUEE ══════════════════════════════════════════════════ -->
+    <section class="marquee-section">
+      <div class="marquee-wrapper">
+        <div class="marquee-track" id="marqueeTrack">
+          <div class="marquee-content">
+            <span>Nutrition Tracking</span><span class="marquee-dot">·</span>
+            <span>Workout Logging</span><span class="marquee-dot">·</span>
+            <span>Apple Health Sync</span><span class="marquee-dot">·</span>
+            <span>Hydration Tracking</span><span class="marquee-dot">·</span>
+            <span>Weight History</span><span class="marquee-dot">·</span>
+            <span>Custom Routines</span><span class="marquee-dot">·</span>
+            <span>USDA Food Database</span><span class="marquee-dot">·</span>
+            <span>Open Food Facts</span><span class="marquee-dot">·</span>
+            <span>Zero Data Collection</span><span class="marquee-dot">·</span>
+            <span>HealthKit Integration</span><span class="marquee-dot">·</span>
+            <span>Personal Records</span><span class="marquee-dot">·</span>
+            <span>Privacy First</span><span class="marquee-dot">·</span>
+            <!-- duplicate for seamless loop -->
+            <span>Nutrition Tracking</span><span class="marquee-dot">·</span>
+            <span>Workout Logging</span><span class="marquee-dot">·</span>
+            <span>Apple Health Sync</span><span class="marquee-dot">·</span>
+            <span>Hydration Tracking</span><span class="marquee-dot">·</span>
+            <span>Weight History</span><span class="marquee-dot">·</span>
+            <span>Custom Routines</span><span class="marquee-dot">·</span>
+            <span>USDA Food Database</span><span class="marquee-dot">·</span>
+            <span>Open Food Facts</span><span class="marquee-dot">·</span>
+            <span>Zero Data Collection</span><span class="marquee-dot">·</span>
+            <span>HealthKit Integration</span><span class="marquee-dot">·</span>
+            <span>Personal Records</span><span class="marquee-dot">·</span>
+            <span>Privacy First</span><span class="marquee-dot">·</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FEATURES ═════════════════════════════════════════════════ -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Everything you need</p>
+          <h2 class="section-title">Built for your entire health journey.</h2>
+          <p class="section-sub">From what you eat to how you train, VitaTrack gives you a complete picture of your wellness — without ever uploading a byte of your data.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card reveal" data-reveal-delay="0">
+            <div class="feature-icon-wrap">
+              <span class="feature-icon">🥗</span>
+            </div>
+            <h3>Nutrition Tracking</h3>
+            <p>Log every meal with access to millions of foods from the USDA FoodData Central database and Open Food Facts. See your macros, calories, and micronutrients at a glance.</p>
+            <ul class="feature-bullets">
+              <li>Millions of foods in database</li>
+              <li>Macro &amp; micronutrient tracking</li>
+              <li>Custom meal creation</li>
+              <li>Daily nutrition goals</li>
+            </ul>
+          </div>
+
+          <div class="feature-card reveal" data-reveal-delay="80">
+            <div class="feature-icon-wrap">
+              <span class="feature-icon">💪</span>
+            </div>
+            <h3>Workout Logging</h3>
+            <p>Track every rep, set, and mile. Build custom routines and watch your strength progress over time with detailed history and personal records.</p>
+            <ul class="feature-bullets">
+              <li>Custom workout routines</li>
+              <li>Reps, sets &amp; weight tracking</li>
+              <li>Cardio &amp; distance logging</li>
+              <li>Personal records &amp; progress</li>
+            </ul>
+          </div>
+
+          <div class="feature-card reveal" data-reveal-delay="160">
+            <div class="feature-icon-wrap">
+              <span class="feature-icon">❤️</span>
+            </div>
+            <h3>Apple Health Sync</h3>
+            <p>Seamlessly sync with Apple's HealthKit. VitaTrack reads your sleep, heart rate, and HRV data — and writes back your workouts, weight, and hydration.</p>
+            <ul class="feature-bullets">
+              <li>Read sleep &amp; HRV data</li>
+              <li>Sync heart rate metrics</li>
+              <li>Write workouts to HealthKit</li>
+              <li>Bidirectional data sync</li>
+            </ul>
+          </div>
+
+          <div class="feature-card reveal" data-reveal-delay="240">
+            <div class="feature-icon-wrap">
+              <span class="feature-icon">💧</span>
+            </div>
+            <h3>Hydration Tracking</h3>
+            <p>Stay on top of your daily water intake. Set custom hydration goals and log your consumption throughout the day, synced with Apple Health.</p>
+            <ul class="feature-bullets">
+              <li>Daily water intake goals</li>
+              <li>Quick-log shortcuts</li>
+              <li>Apple Health sync</li>
+              <li>Visual progress tracking</li>
+            </ul>
+          </div>
+
+          <div class="feature-card reveal" data-reveal-delay="320">
+            <div class="feature-icon-wrap">
+              <span class="feature-icon">⚖️</span>
+            </div>
+            <h3>Weight History</h3>
+            <p>Log your weight and body metrics over time. Visualize progress with beautiful charts and track trends toward your wellness goals.</p>
+            <ul class="feature-bullets">
+              <li>Weight trend visualization</li>
+              <li>Goal weight tracking</li>
+              <li>HealthKit body data sync</li>
+              <li>Long-term history view</li>
+            </ul>
+          </div>
+
+          <div class="feature-card feature-card--dark reveal" data-reveal-delay="400">
+            <div class="feature-icon-wrap">
+              <span class="feature-icon">🔒</span>
+            </div>
+            <h3>Private by Design</h3>
+            <p>Every piece of data stays on your iPhone. No accounts. No servers. No tracking. VitaTrack is built with privacy at its core — your health data is yours, period.</p>
+            <ul class="feature-bullets feature-bullets--dark">
+              <li>No account required</li>
+              <li>Zero data leaves your device</li>
+              <li>No analytics or tracking</li>
+              <li>No third-party data sharing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ NUTRITION DEEP DIVE ══════════════════════════════════════ -->
+    <section class="deep-dive" id="nutrition">
+      <div class="container">
+        <div class="deep-dive-layout">
+          <div class="deep-dive-text reveal">
+            <p class="section-eyebrow">Nutrition Tracking</p>
+            <h2>Eat smarter,<br>not harder.</h2>
+            <p>VitaTrack connects to two of the world's largest food databases — <strong>USDA FoodData Central</strong> and <strong>Open Food Facts</strong> — giving you access to millions of foods with detailed nutritional information.</p>
+            <p>Log your meals in seconds, see your daily macros, and understand exactly how your nutrition fuels your fitness goals.</p>
+            <div class="pill-group">
+              <span class="pill">Calories</span>
+              <span class="pill">Protein</span>
+              <span class="pill">Carbohydrates</span>
+              <span class="pill">Fats</span>
+              <span class="pill">Fiber</span>
+              <span class="pill">Micronutrients</span>
+            </div>
+          </div>
+          <div class="deep-dive-visual reveal" data-reveal-delay="120">
+            <div class="mock-card nutrition-mock">
+              <div class="mock-card-header">
+                <span class="mock-label">Today's Nutrition</span>
+                <span class="mock-goal">Goal: 2,400 kcal</span>
+              </div>
+              <div class="calorie-ring-wrap">
+                <div class="calorie-ring">
+                  <svg viewBox="0 0 120 120" class="ring-svg" id="calRingSvg">
+                    <circle cx="60" cy="60" r="50" fill="none" stroke="#e5e5ea" stroke-width="8"/>
+                    <circle cx="60" cy="60" r="50" fill="none" stroke="#0071e3" stroke-width="8"
+                      stroke-linecap="round"
+                      stroke-dasharray="314"
+                      stroke-dashoffset="314"
+                      class="ring-arc"
+                      data-offset="94"/>
+                  </svg>
+                  <div class="ring-center">
+                    <span class="ring-num" data-count="1847">0</span>
+                    <span class="ring-unit">kcal</span>
+                  </div>
+                </div>
+                <div class="macro-stack">
+                  <div class="macro-row">
+                    <span class="macro-name">Protein</span>
+                    <div class="macro-bar-track">
+                      <div class="macro-bar-fill" data-fill-w="72" style="background:#30d158;width:0%"></div>
+                    </div>
+                    <span class="macro-grams">142g</span>
+                  </div>
+                  <div class="macro-row">
+                    <span class="macro-name">Carbs</span>
+                    <div class="macro-bar-track">
+                      <div class="macro-bar-fill" data-fill-w="60" style="background:#0071e3;width:0%"></div>
+                    </div>
+                    <span class="macro-grams">198g</span>
+                  </div>
+                  <div class="macro-row">
+                    <span class="macro-name">Fat</span>
+                    <div class="macro-bar-track">
+                      <div class="macro-bar-fill" data-fill-w="44" style="background:#ff9f0a;width:0%"></div>
+                    </div>
+                    <span class="macro-grams">64g</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mock-meals">
+                <div class="mock-meal-row"><span>🌅 Breakfast</span><span>480 kcal</span></div>
+                <div class="mock-meal-row"><span>☀️ Lunch</span><span>712 kcal</span></div>
+                <div class="mock-meal-row"><span>🌙 Dinner</span><span>655 kcal</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WORKOUT DEEP DIVE ════════════════════════════════════════ -->
+    <section class="deep-dive deep-dive--dark" id="workouts">
+      <div class="container">
+        <div class="deep-dive-layout deep-dive-layout--reverse">
+          <div class="deep-dive-visual reveal">
+            <div class="mock-card workout-mock">
+              <div class="mock-card-header workout-header">
+                <span class="mock-label" style="color:#f5f5f7;">Today's Workout</span>
+                <span class="workout-badge">62 min</span>
+              </div>
+              <div class="exercise-list">
+                <div class="exercise-row">
+                  <div class="exercise-name">Squat</div>
+                  <div class="exercise-sets">
+                    <span class="set-chip">5×225</span>
+                    <span class="set-chip">4×265</span>
+                    <span class="set-chip set-chip--pr">3×305 🏆</span>
+                  </div>
+                </div>
+                <div class="exercise-row">
+                  <div class="exercise-name">Overhead Press</div>
+                  <div class="exercise-sets">
+                    <span class="set-chip">3×120</span>
+                    <span class="set-chip">3×135</span>
+                  </div>
+                </div>
+                <div class="exercise-row">
+                  <div class="exercise-name">Romanian Deadlift</div>
+                  <div class="exercise-sets">
+                    <span class="set-chip">4×225</span>
+                    <span class="set-chip">3×315</span>
+                  </div>
+                </div>
+                <div class="exercise-row">
+                  <div class="exercise-name">Lateral Raise</div>
+                  <div class="exercise-sets">
+                    <span class="set-chip">3×45</span>
+                    <span class="set-chip">3×50</span>
+                  </div>
+                </div>
+              </div>
+              <div class="workout-totals">
+                <div class="total-chip">4 exercises</div>
+                <div class="total-chip">14 sets</div>
+                <div class="total-chip">Vol: 8,240 lbs</div>
+              </div>
+            </div>
+          </div>
+          <div class="deep-dive-text reveal" data-reveal-delay="120">
+            <p class="section-eyebrow" style="color:#86c7ff;">Workout Logging</p>
+            <h2 style="color:#f5f5f7;">Every rep.<br>Every record.</h2>
+            <p style="color:#aeaeb2;">Build custom workout routines and log your training with precision. Track reps, sets, and weight — then watch your strength grow through detailed history and personal bests.</p>
+            <p style="color:#aeaeb2;">Whether you're lifting heavy or logging a morning run, VitaTrack captures it all.</p>
+            <div class="pill-group">
+              <span class="pill pill--dark">Strength Training</span>
+              <span class="pill pill--dark">Cardio &amp; Running</span>
+              <span class="pill pill--dark">Custom Routines</span>
+              <span class="pill pill--dark">Personal Records</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ APPLE HEALTH ══════════════════════════════════════════════ -->
+    <section class="health-section">
+      <div class="container">
+        <div class="health-inner reveal">
+          <div class="health-badge-icon">
+            <svg width="52" height="52" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 54C30 54 6 40 6 22C6 14 12 8 20 8C24.5 8 28.5 10.5 30 14C31.5 10.5 35.5 8 40 8C48 8 54 14 54 22C54 40 30 54 30 54Z" fill="#ff3b5c"/>
+            </svg>
+          </div>
+          <h2>Works beautifully with<br><span class="text-gradient">Apple Health.</span></h2>
+          <p class="section-sub" style="max-width:540px;margin:0 auto 56px;">VitaTrack integrates deeply with Apple's HealthKit so all your wellness data lives in one cohesive ecosystem — automatically and privately.</p>
+          <div class="health-grid">
+            <div class="health-item reveal" data-reveal-delay="0">
+              <div class="health-item-icon">😴</div>
+              <div>
+                <strong>Sleep Analysis</strong>
+                <span>Read sleep duration &amp; quality from HealthKit</span>
+              </div>
+            </div>
+            <div class="health-item reveal" data-reveal-delay="60">
+              <div class="health-item-icon">❤️</div>
+              <div>
+                <strong>Heart Rate</strong>
+                <span>Monitor resting &amp; active heart rate</span>
+              </div>
+            </div>
+            <div class="health-item reveal" data-reveal-delay="120">
+              <div class="health-item-icon">📈</div>
+              <div>
+                <strong>HRV Tracking</strong>
+                <span>Heart rate variability for recovery insights</span>
+              </div>
+            </div>
+            <div class="health-item reveal" data-reveal-delay="180">
+              <div class="health-item-icon">🏋️</div>
+              <div>
+                <strong>Workouts</strong>
+                <span>Write training sessions to Apple Health</span>
+              </div>
+            </div>
+            <div class="health-item reveal" data-reveal-delay="240">
+              <div class="health-item-icon">⚖️</div>
+              <div>
+                <strong>Body Weight</strong>
+                <span>Sync weight measurements bidirectionally</span>
+              </div>
+            </div>
+            <div class="health-item reveal" data-reveal-delay="300">
+              <div class="health-item-icon">💧</div>
+              <div>
+                <strong>Hydration</strong>
+                <span>Log water intake to Apple Health</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ STATS ══════════════════════════════════════════════════════ -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal" data-reveal-delay="0">
+            <div class="stat-num" data-count="1000000">0</div>
+            <div class="stat-suffix">+</div>
+            <div class="stat-label">Foods in Database</div>
+          </div>
+          <div class="stat-item reveal" data-reveal-delay="100">
+            <div class="stat-num" data-count="500">0</div>
+            <div class="stat-suffix">+</div>
+            <div class="stat-label">Exercise Types</div>
+          </div>
+          <div class="stat-item reveal" data-reveal-delay="200">
+            <div class="stat-num" data-count="0">0</div>
+            <div class="stat-suffix"></div>
+            <div class="stat-label">Servers With Your Data</div>
+          </div>
+          <div class="stat-item reveal" data-reveal-delay="300">
+            <div class="stat-num" data-count="100">0</div>
+            <div class="stat-suffix">%</div>
+            <div class="stat-label">Private &amp; On-Device</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PRIVACY ══════════════════════════════════════════════════ -->
+    <section class="privacy-section" id="privacy">
+      <div class="container">
+        <div class="privacy-layout">
+          <div class="privacy-text reveal">
+            <p class="section-eyebrow">Privacy First</p>
+            <h2>Your data never<br>leaves your iPhone.</h2>
+            <p>In a world where health apps sell your most personal data, VitaTrack takes a fundamentally different approach. Everything is stored locally on your device using Core Data. No accounts, no servers, no tracking — ever.</p>
+            <div class="privacy-checks">
+              <div class="privacy-check">
+                <div class="check-icon">✓</div>
+                <div>
+                  <strong>No account required</strong>
+                  <p>Jump straight in. No email, no password, no sign-up required.</p>
+                </div>
+              </div>
+              <div class="privacy-check">
+                <div class="check-icon">✓</div>
+                <div>
+                  <strong>Local-only storage</strong>
+                  <p>All your health data lives on your iPhone using Core Data.</p>
+                </div>
+              </div>
+              <div class="privacy-check">
+                <div class="check-icon">✓</div>
+                <div>
+                  <strong>Zero analytics or tracking</strong>
+                  <p>No analytics SDKs, crash reporters, or ad networks. None.</p>
+                </div>
+              </div>
+              <div class="privacy-check">
+                <div class="check-icon">✓</div>
+                <div>
+                  <strong>No third-party sharing</strong>
+                  <p>Your data is never sold, shared, or sent anywhere.</p>
+                </div>
+              </div>
+            </div>
+            <a href="Privacy Policy.html" class="btn-ghost btn-ghost--subtle">Read our Privacy Policy →</a>
+          </div>
+          <div class="privacy-visual reveal" data-reveal-delay="140">
+            <div class="privacy-card">
+              <div class="privacy-card-header">
+                <div class="privacy-shield">🛡️</div>
+                <div>
+                  <strong>App Privacy</strong>
+                  <span>Data not collected</span>
+                </div>
+              </div>
+              <div class="privacy-rows">
+                <div class="privacy-row">
+                  <span class="pcheck">✓</span>
+                  <span>Data Not Linked to You</span>
+                </div>
+                <div class="privacy-row">
+                  <span class="pcheck">✓</span>
+                  <span>No Tracking</span>
+                </div>
+                <div class="privacy-row">
+                  <span class="pcheck">✓</span>
+                  <span>On-Device Only</span>
+                </div>
+                <div class="privacy-row">
+                  <span class="pcheck">✓</span>
+                  <span>No Purchases Required</span>
+                </div>
+                <div class="privacy-row">
+                  <span class="pcheck">✓</span>
+                  <span>No Account Needed</span>
+                </div>
+              </div>
+              <div class="privacy-card-footer">
+                Verified · February 24, 2026
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ DOWNLOAD CTA ══════════════════════════════════════════════ -->
+    <section class="cta-section">
+      <div class="cta-inner reveal">
+        <div class="cta-glow"></div>
+        <p class="section-eyebrow" style="color:#86c7ff;">Free Download</p>
+        <h2>Start your health journey today.</h2>
+        <p>VitaTrack is free to download. No subscriptions. No in-app purchases required to take control of your health.</p>
+        <a href="#" class="btn-appstore btn-appstore--large magnetic-btn">
+          <svg class="appstore-icon" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download on the App Store
+        </a>
+        <p class="cta-fine">Free · No subscription · iPhone only · Requires iOS 16.0+</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER ══════════════════════════════════════════════════════ -->
   <footer class="footer">
     <div class="footer-inner">
-      <p class="footer-copy">Copyright &copy; 2025 VitaTrack. All rights reserved.</p>
-      <ul class="footer-links">
-        <li><a href="mailto:jtravelax@gmail.com">Contact</a></li>
-        <li><a href="Privacy Policy.html">Privacy Policy</a></li>
-        <li><a href="Terms of Service.html">Terms of Service</a></li>
-      </ul>
+      <div class="footer-top">
+        <a href="VitaHome.html" class="footer-brand">
+          <img src="Untitled.png" alt="VitaTrack" class="nav-logo-img">
+          <span>VitaTrack</span>
+        </a>
+        <nav class="footer-nav">
+          <a href="mailto:jtravelax@gmail.com">Contact</a>
+          <a href="Privacy Policy.html">Privacy Policy</a>
+          <a href="Terms of Service.html">Terms of Service</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">Copyright &copy; 2025 VitaTrack. All rights reserved.</p>
+        <p class="footer-disclaimer">VitaTrack is not a medical device and is not intended to diagnose, treat, cure, or prevent any disease or health condition.</p>
+      </div>
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
