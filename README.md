@@ -1,2 +1,0 @@
-# VitaTrack
-Website for vitatrack
