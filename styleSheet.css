@@ -12,8 +12,9 @@
   --text-primary: #1d1d1f;
   --text-secondary: #6e6e73;
   --text-tertiary: #aeaeb2;
-  --accent: #0071e3;
-  --accent-hover: #0077ed;
+  --accent: #bf5af2;
+  --accent-hover: #a44fd4;
+  --accent-blue: #0071e3;
   --accent-green: #30d158;
   --accent-orange: #ff9f0a;
   --accent-red: #ff3b5c;
@@ -75,7 +76,7 @@ strong { font-weight: 600; }
   left: 0;
   height: 2px;
   width: 0%;
-  background: linear-gradient(90deg, #0071e3, #5ac8fa);
+  background: linear-gradient(90deg, #bf5af2, #9b59d4);
   z-index: 999;
   transition: width 0.1s linear;
 }
@@ -285,7 +286,7 @@ strong { font-weight: 600; }
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #0071e3 0%, #5ac8fa 100%);
+  background: linear-gradient(135deg, #bf5af2 0%, #9b59d4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -326,7 +327,7 @@ strong { font-weight: 600; }
   width: 340px;
   height: 340px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(0,113,227,0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(191,90,242,0.18) 0%, transparent 70%);
   pointer-events: none;
   animation: glow-pulse 4s ease-in-out infinite;
 }
@@ -813,82 +814,304 @@ strong { font-weight: 600; }
   color: var(--text-primary);
 }
 
-/* ─── Mock Workout Card ──────────────────────────────────────────── */
+/* ─── Mock Workout Card (form-based, matches real iOS UI) ────────── */
 .workout-mock {
-  background: #2c2c2e;
+  background: #1c1c1e;
   border: 1px solid rgba(255,255,255,0.08);
+  padding: 20px;
 }
 
-.workout-header {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
+/* Exercise header */
+.wf-exercise-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-.workout-badge {
+.wf-exercise-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #f5f5f7;
+  letter-spacing: -0.3px;
+}
+
+.wf-set-counter {
   font-size: 12px;
-  font-weight: 500;
+  color: #636366;
+}
+
+/* Set list */
+.wf-set-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+/* Base set card */
+.wf-set-card {
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Done state */
+.wf-set-card--done {
+  background: transparent;
+}
+
+.wf-set-num {
+  font-size: 12px;
+  color: #636366;
+  width: 36px;
+  flex-shrink: 0;
+}
+
+.wf-set-result {
+  font-size: 13px;
   color: #aeaeb2;
-  background: rgba(255,255,255,0.08);
-  padding: 3px 10px;
-  border-radius: var(--radius-pill);
+  flex: 1;
 }
 
-.exercise-list {
-  display: flex;
+.wf-set-check {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-green);
+}
+
+/* Active state */
+.wf-set-card--active {
+  background: rgba(191,90,242,0.08);
+  border: 1px solid rgba(191,90,242,0.18);
   flex-direction: column;
-  gap: 16px;
-  margin-bottom: 20px;
+  align-items: stretch;
+  gap: 0;
+  padding: 12px;
 }
 
-.exercise-row {
+.wf-row {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
 }
 
-.exercise-name {
-  font-size: 14px;
-  font-weight: 600;
+.wf-row + .wf-row {
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.wf-label {
+  font-size: 13px;
+  color: #aeaeb2;
+}
+
+/* Stepper */
+.wf-stepper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wf-stepper-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: #f5f5f7;
+  font-size: 16px;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.wf-stepper-val {
+  font-size: 15px;
+  font-weight: 700;
+  color: #f5f5f7;
+  min-width: 20px;
+  text-align: center;
+}
+
+.wf-weight-val {
+  font-size: 15px;
+  font-weight: 700;
   color: #f5f5f7;
 }
 
-.exercise-sets {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+/* BW + Warm-up row */
+.wf-bw-btn {
+  font-size: 11px;
+  font-weight: 600;
+  color: #aeaeb2;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: default;
+  letter-spacing: 0.2px;
 }
 
-.set-chip {
+.wf-warmup-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Toggle (off state) */
+.wf-toggle {
+  width: 36px;
+  height: 20px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  position: relative;
+}
+
+.wf-toggle::after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background: #636366;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+/* Action buttons row */
+.wf-row--btns {
+  gap: 8px;
+  padding-top: 10px !important;
+  border-top: 1px solid rgba(255,255,255,0.06) !important;
+  justify-content: flex-end;
+}
+
+.wf-btn-bordered {
   font-size: 12px;
   font-weight: 500;
   color: #aeaeb2;
-  background: rgba(255,255,255,0.08);
-  padding: 4px 10px;
-  border-radius: var(--radius-sm);
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: default;
+}
+
+.wf-btn-done {
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent-purple);
+  border: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  cursor: default;
+}
+
+/* Pending state */
+.wf-set-card--pending {
+  background: transparent;
+  opacity: 0.5;
+}
+
+.wf-set-pending {
+  font-size: 13px;
+  color: #48484a;
+}
+
+/* Add Set */
+.wf-add-set {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-purple);
+  background: none;
+  border: none;
+  padding: 6px 0;
+  cursor: default;
+  margin-bottom: 14px;
+  display: block;
+}
+
+/* Rest Timer */
+.wf-rest-timer {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 14px;
+  margin-bottom: 14px;
+}
+
+.wf-rest-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #636366;
+  margin-bottom: 10px;
+}
+
+.wf-rest-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.wf-rest-adj {
+  font-size: 12px;
+  font-weight: 600;
+  color: #aeaeb2;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 5px 12px;
+  cursor: default;
+}
+
+.wf-rest-dur {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f5f5f7;
+  letter-spacing: -0.5px;
+  min-width: 52px;
+  text-align: center;
+}
+
+.wf-rest-start {
+  width: 100%;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent-purple);
+  border: none;
+  border-radius: 10px;
+  padding: 9px;
+  cursor: default;
   letter-spacing: -0.1px;
 }
 
-.set-chip--pr {
-  color: #ffd60a;
-  background: rgba(255,214,10,0.12);
-}
-
-.workout-totals {
+/* PR Indicator */
+.wf-pr-indicator {
   display: flex;
+  align-items: center;
   gap: 8px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding-top: 16px;
+  background: rgba(255,214,10,0.08);
+  border: 1px solid rgba(255,214,10,0.18);
+  border-radius: 10px;
+  padding: 8px 12px;
 }
 
-.total-chip {
-  font-size: 12px;
-  font-weight: 500;
-  color: #6e6e73;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 5px 12px;
-  border-radius: var(--radius-pill);
+.wf-pr-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffd60a;
+  letter-spacing: -0.2px;
 }
 
 /* ─── Apple Health Section ───────────────────────────────────────── */
@@ -1177,7 +1400,7 @@ strong { font-weight: 600; }
   transform: translate(-50%, -50%);
   width: 500px;
   height: 300px;
-  background: radial-gradient(ellipse, rgba(0,113,227,0.2) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(191,90,242,0.2) 0%, transparent 70%);
   pointer-events: none;
 }
 

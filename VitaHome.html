@@ -63,7 +63,7 @@
           <div class="hero-badge animate-fade-up">
             <span class="badge-pill">
               <span class="badge-dot"></span>
-              Free to start · iOS 18 · iPhone &amp; Apple Watch
+              Free to start · iOS 18 · No account required
             </span>
           </div>
           <h1 class="hero-headline animate-fade-up anim-delay-1">
@@ -103,7 +103,7 @@
             <span>873 Exercises</span><span class="marquee-dot">·</span>
             <span>12 Nutrients Tracked</span><span class="marquee-dot">·</span>
             <span>Barcode Scanner</span><span class="marquee-dot">·</span>
-            <span>Apple Watch App</span><span class="marquee-dot">·</span>
+            <span>Progress Photos</span><span class="marquee-dot">·</span>
             <span>Custom Recipes</span><span class="marquee-dot">·</span>
             <span>Program Builder</span><span class="marquee-dot">·</span>
             <span>PR Detection</span><span class="marquee-dot">·</span>
@@ -118,7 +118,7 @@
             <span>873 Exercises</span><span class="marquee-dot">·</span>
             <span>12 Nutrients Tracked</span><span class="marquee-dot">·</span>
             <span>Barcode Scanner</span><span class="marquee-dot">·</span>
-            <span>Apple Watch App</span><span class="marquee-dot">·</span>
+            <span>Progress Photos</span><span class="marquee-dot">·</span>
             <span>Custom Recipes</span><span class="marquee-dot">·</span>
             <span>Program Builder</span><span class="marquee-dot">·</span>
             <span>PR Detection</span><span class="marquee-dot">·</span>
@@ -282,9 +282,9 @@
                     <span class="macro-grams">198g</span>
                   </div>
                   <div class="macro-row">
-                    <span class="macro-name" style="color:var(--accent)">Fat</span>
+                    <span class="macro-name" style="color:#0071e3">Fat</span>
                     <div class="macro-bar-track">
-                      <div class="macro-bar-fill" data-fill-w="45" style="background:var(--accent);width:0%"></div>
+                      <div class="macro-bar-fill" data-fill-w="45" style="background:#0071e3;width:0%"></div>
                     </div>
                     <span class="macro-grams">64g</span>
                   </div>
@@ -308,49 +308,81 @@
         <div class="deep-dive-layout deep-dive-layout--reverse">
           <div class="deep-dive-visual reveal">
             <div class="mock-card workout-mock">
-              <div class="mock-card-header workout-header">
-                <div>
-                  <span class="mock-label" style="color:#f5f5f7;">Push Day</span>
-                  <div class="workout-meta">Program: 5-Day Split · 62 min</div>
-                </div>
-                <span class="workout-badge">Active</span>
+
+              <!-- Exercise header -->
+              <div class="wf-exercise-header">
+                <span class="wf-exercise-name">Squat</span>
+                <span class="wf-set-counter">Set 2 of 4</span>
               </div>
-              <div class="exercise-list">
-                <div class="exercise-row">
-                  <div class="exercise-name">Squat</div>
-                  <div class="exercise-sets">
-                    <span class="set-chip">5×225</span>
-                    <span class="set-chip">4×265</span>
-                    <span class="set-chip set-chip--pr">3×305 🏆 PR</span>
+
+              <!-- Set list -->
+              <div class="wf-set-list">
+
+                <!-- Set 1 — done -->
+                <div class="wf-set-card wf-set-card--done">
+                  <span class="wf-set-num">Set 1</span>
+                  <span class="wf-set-result">5 reps · 225 lbs</span>
+                  <span class="wf-set-check">✓</span>
+                </div>
+
+                <!-- Set 2 — active (purple glow) -->
+                <div class="wf-set-card wf-set-card--active">
+                  <div class="wf-row">
+                    <span class="wf-label">Reps</span>
+                    <div class="wf-stepper">
+                      <button class="wf-stepper-btn">−</button>
+                      <span class="wf-stepper-val">5</span>
+                      <button class="wf-stepper-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="wf-row">
+                    <span class="wf-label">Weight</span>
+                    <span class="wf-weight-val">265.0 lbs</span>
+                  </div>
+                  <div class="wf-row">
+                    <button class="wf-bw-btn">BW</button>
+                    <div class="wf-warmup-row">
+                      <span class="wf-label">Warm-up</span>
+                      <div class="wf-toggle"></div>
+                    </div>
+                  </div>
+                  <div class="wf-row wf-row--btns">
+                    <button class="wf-btn-bordered">Make Current</button>
+                    <button class="wf-btn-done">Done ✓</button>
                   </div>
                 </div>
-                <div class="exercise-row">
-                  <div class="exercise-name">Overhead Press</div>
-                  <div class="exercise-sets">
-                    <span class="set-chip">3×120</span>
-                    <span class="set-chip">3×135</span>
-                  </div>
+
+                <!-- Sets 3 & 4 — pending -->
+                <div class="wf-set-card wf-set-card--pending">
+                  <span class="wf-set-num">Set 3</span>
+                  <span class="wf-set-pending">—</span>
                 </div>
-                <div class="exercise-row">
-                  <div class="exercise-name">Romanian Deadlift</div>
-                  <div class="exercise-sets">
-                    <span class="set-chip">4×225</span>
-                    <span class="set-chip">3×315</span>
-                  </div>
-                </div>
-                <div class="exercise-row">
-                  <div class="exercise-name">Lateral Raise</div>
-                  <div class="exercise-sets">
-                    <span class="set-chip">3×45</span>
-                    <span class="set-chip">3×50</span>
-                  </div>
+                <div class="wf-set-card wf-set-card--pending">
+                  <span class="wf-set-num">Set 4</span>
+                  <span class="wf-set-pending">—</span>
                 </div>
               </div>
-              <div class="workout-totals">
-                <div class="total-chip">4 exercises</div>
-                <div class="total-chip">14 sets</div>
-                <div class="total-chip">Vol: 8,240 lbs</div>
+
+              <!-- Add Set -->
+              <button class="wf-add-set">+ Add Set</button>
+
+              <!-- Rest Timer -->
+              <div class="wf-rest-timer">
+                <div class="wf-rest-title">Rest Timer</div>
+                <div class="wf-rest-row">
+                  <button class="wf-rest-adj">−15</button>
+                  <span class="wf-rest-dur">90s</span>
+                  <button class="wf-rest-adj">+15</button>
+                </div>
+                <button class="wf-rest-start">Start Rest</button>
               </div>
+
+              <!-- PR Indicator -->
+              <div class="wf-pr-indicator">
+                <span>🏆</span>
+                <span class="wf-pr-text">New PR: 305 lbs</span>
+              </div>
+
             </div>
           </div>
           <div class="deep-dive-text reveal" data-reveal-delay="120">
@@ -366,38 +398,6 @@
               <span class="pill pill--purple">Olympic · 35</span>
               <span class="pill pill--purple">Strongman · 21</span>
               <span class="pill pill--purple">Cardio · 14</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ APPLE WATCH ════════════════════════════════════════════════ -->
-    <section class="watch-section">
-      <div class="container">
-        <div class="watch-inner reveal">
-          <div class="watch-icon">⌚</div>
-          <div class="watch-text">
-            <p class="section-eyebrow" style="text-align:left;">Apple Watch</p>
-            <h2>Your wrist.<br>Your workout.</h2>
-            <p>The VitaTrack Apple Watch companion app keeps you in the zone without touching your phone. Follow along with your workout, start the rest timer, and log your weight — right from your wrist.</p>
-            <div class="watch-features">
-              <div class="watch-feature-item">
-                <span class="watch-feature-icon">🏋️</span>
-                <span>Workout follow-along mode</span>
-              </div>
-              <div class="watch-feature-item">
-                <span class="watch-feature-icon">⏱️</span>
-                <span>Rest timer on your wrist</span>
-              </div>
-              <div class="watch-feature-item">
-                <span class="watch-feature-icon">⚖️</span>
-                <span>Quick weight logging</span>
-              </div>
-              <div class="watch-feature-item">
-                <span class="watch-feature-icon">❤️</span>
-                <span>Live heart rate during workouts</span>
-              </div>
             </div>
           </div>
         </div>
@@ -526,7 +526,7 @@
               <li class="pro-feature"><span class="pro-check pro-check--yes">✓</span>Nutrition tracking &amp; barcode scanning</li>
               <li class="pro-feature"><span class="pro-check pro-check--yes">✓</span>Hydration &amp; weight tracking</li>
               <li class="pro-feature"><span class="pro-check pro-check--yes">✓</span>Apple Health sync</li>
-              <li class="pro-feature"><span class="pro-check pro-check--yes">✓</span>Apple Watch app</li>
+              <li class="pro-feature"><span class="pro-check pro-check--yes">✓</span>Apple Health bidirectional sync</li>
               <li class="pro-feature"><span class="pro-check pro-check--no">—</span><span style="color:var(--text-tertiary)">30-day history limit</span></li>
               <li class="pro-feature"><span class="pro-check pro-check--no">—</span><span style="color:var(--text-tertiary)">Advanced beverage types</span></li>
               <li class="pro-feature"><span class="pro-check pro-check--no">—</span><span style="color:var(--text-tertiary)">Home screen widgets</span></li>
@@ -651,7 +651,7 @@
           <svg class="appstore-icon" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
           Download on the App Store
         </a>
-        <p class="cta-fine">Free · 3-month Pro trial · iPhone &amp; Apple Watch · Requires iOS 18.0+</p>
+        <p class="cta-fine">Free · 3-month Pro trial · iPhone · Requires iOS 18.0+</p>
       </div>
     </section>
 
